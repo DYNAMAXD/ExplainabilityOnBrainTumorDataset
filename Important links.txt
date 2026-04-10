@@ -1,0 +1,5 @@
+hugging face model deployment @ https://huggingface.co/spaces/DYNAMAXD/BrainTumorXAI/tree/main
+
+vercel website deployment @ https://vercel.com/dynamaxds-projects/explainability-on-brain-tumor-dataset
+
+final website @ https://explainability-on-brain-tumor-datas.vercel.app/
