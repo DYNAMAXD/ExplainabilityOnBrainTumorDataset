@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResNet50 XAI Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob-wrapper">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Brain Tumor <span class="accent">XAI</span></h1>
+            <p>Upload an MRI scan to generate ResNet50 predictions and Class Activation Mapping analyses.</p>
+        </header>
+
+        <section class="upload-section glass-panel">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="imageInput" accept="image/jpeg, image/png, image/jpg" hidden>
+                <div class="upload-content">
+                    <svg class="upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    <p class="upload-text">Click or drag & drop to upload MRI image</p>
+                    <p class="upload-hint">Supports JPG, PNG</p>
+                </div>
+                <img id="imagePreview" class="hidden" alt="Preview">
+            </div>
+            <button id="analyzeBtn" class="btn primary-btn disabled" disabled>
+                <span>Generate Analysis</span>
+                <div class="spinner hidden" id="loadingSpinner"></div>
+            </button>
+        </section>
+
+        <!-- Results Section Container -->
+        <section id="resultsContainer" class="results-container hidden">
+            <div id="predictionDisplay" class="prediction-panel glass-panel">
+                <h2 class="sub-title">Prediction Result</h2>
+                <div class="pred-details">
+                    <div class="pred-class-wrapper">
+                        <span class="label">Class:</span>
+                        <span id="predClass" class="value primary-value">-</span>
+                    </div>
+                    <div class="pred-conf-wrapper">
+                        <span class="label">Confidence:</span>
+                        <span id="predConf" class="value">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid for Maps -->
+            <div class="maps-grid">
+                <div class="map-card glass-panel">
+                    <h3>Original</h3>
+                    <div class="image-wrapper">
+                        <img id="origImg" src="" alt="Original Image">
+                    </div>
+                </div>
+                <div class="map-card glass-panel">
+                    <h3>Grad-CAM</h3>
+                    <div class="image-wrapper">
+                        <img id="gradcamImg" src="" alt="Grad-CAM">
+                    </div>
+                </div>
+                <div class="map-card glass-panel">
+                    <h3>Grad-CAM++</h3>
+                    <div class="image-wrapper">
+                        <img id="gradcamppImg" src="" alt="Grad-CAM++">
+                    </div>
+                </div>
+                <div class="map-card glass-panel">
+                    <h3>Score-CAM</h3>
+                    <div class="image-wrapper">
+                        <img id="scorecamImg" src="" alt="Score-CAM">
+                    </div>
+                </div>
+                <div class="map-card glass-panel">
+                    <h3>Occlusion Map</h3>
+                    <div class="image-wrapper">
+                        <img id="occlusionImg" src="" alt="Occlusion Map">
+                    </div>
+                </div>
+                <div class="map-card glass-panel">
+                    <h3>Eigen-CAM</h3>
+                    <div class="image-wrapper">
+                        <img id="eigencamImg" src="" alt="Eigen-CAM">
+                    </div>
+                </div>
+                <div class="map-card glass-panel">
+                    <h3>LayerCAM</h3>
+                    <div class="image-wrapper">
+                        <img id="layercamImg" src="" alt="LayerCAM">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
