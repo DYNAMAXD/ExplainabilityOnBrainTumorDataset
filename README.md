@@ -1,4 +1,4 @@
-# 🧠 Brain Tumor XAI: Explainability on MRI Dataset
+#  Brain Tumor XAI: Explainability on MRI Dataset
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
