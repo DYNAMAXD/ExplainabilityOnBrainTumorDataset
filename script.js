@@ -10,10 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const predClassEl = document.getElementById("predClass");
     const predConfEl = document.getElementById("predConf");
 
-    const imgIds = [
-        "origImg", "gradcamImg", "gradcamppImg", 
-        "scorecamImg", "occlusionImg", "eigencamImg", "layercamImg"
-    ];
+    // UPDATE: Point this to your actual Hugging Face backend URL
+    const API_URL = "https://dynamaxd-braintumorxai.hf.space/predict";
 
     let currentFile = null;
 
@@ -77,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formData.append("file", currentFile);
 
         try {
-            const response = await fetch("/predict", {
+            const response = await fetch(API_URL, {
                 method: "POST",
                 body: formData
             });
@@ -116,12 +114,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } catch (error) {
             console.error("Error during prediction:", error);
-            alert("Error: " + error.message);
+            alert("Error: " + error.message + "\nMake sure your Hugging Face Space is up and RUNNING.");
         } finally {
             analyzeBtn.disabled = false;
             analyzeBtn.querySelector('span').innerText = 'Generate Analysis';
             loadingSpinner.classList.add("hidden");
         }
     });
+
+    // Global download function
+    window.downloadImage = function(imgId, fileName) {
+        const img = document.getElementById(imgId);
+        if (!img || !img.src) return;
+
+        const link = document.createElement("a");
+        link.href = img.src;
+        link.download = `${fileName}_Result.jpg`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
 });

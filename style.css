@@ -165,7 +165,6 @@ header p {
 
 .upload-hint {
     font-size: 0.85rem;
-    color: var(--border-color);
     color: #718096;
 }
 
@@ -208,17 +207,6 @@ header p {
 .primary-btn:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(158, 42, 58, 0.6);
-}
-
-.primary-btn:active:not(:disabled) {
-    transform: translateY(1px);
-}
-
-.primary-btn.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background: #4a5568;
-    box-shadow: none;
 }
 
 .spinner {
@@ -307,6 +295,7 @@ header p {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    position: relative;
 }
 
 .map-card:hover {
@@ -335,6 +324,35 @@ header p {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* Download Button Styles */
+.download-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.download-btn:hover {
+    background: var(--primary-accent);
+    color: white;
+    border-color: var(--primary-accent);
+    transform: translateY(-1px);
+}
+
+.download-btn svg {
+    width: 14px;
+    height: 14px;
 }
 
 @media (max-width: 768px) {
