@@ -30,11 +30,37 @@
                 </div>
                 <img id="imagePreview" class="hidden" alt="Preview">
             </div>
-            <button id="analyzeBtn" class="btn primary-btn disabled" disabled>
-                <span>Generate Analysis</span>
-                <div class="spinner hidden" id="loadingSpinner"></div>
-            </button>
+            <div class="button-group">
+                <button id="analyzeBtn" class="btn primary-btn disabled" disabled>
+                    <span>Generate Analysis</span>
+                    <div class="spinner hidden" id="loadingSpinner"></div>
+                </button>
+                <button id="openCatalogBtn" class="btn secondary-btn">
+                    <span>Browse Samples</span>
+                </button>
+            </div>
         </section>
+
+        <!-- Sample Catalog Modal -->
+        <div id="sampleModal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Sample MRI Library</h2>
+                    <button id="closeModal" class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-scroller" id="tabContainer">
+                        <button class="tab-btn active" data-category="glioma">Glioma</button>
+                        <button class="tab-btn" data-category="meningioma">Meningioma</button>
+                        <button class="tab-btn" data-category="notumor">Healthy</button>
+                        <button class="tab-btn" data-category="pituitary">Pituitary</button>
+                    </div>
+                    <div id="sampleGrid" class="sample-grid">
+                        <!-- Images will be injected here by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Results Section Container -->
         <section id="resultsContainer" class="results-container hidden">
