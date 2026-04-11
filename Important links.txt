@@ -1,3 +1,5 @@
+model development @ https://colab.research.google.com/drive/1Zj7JkqT6D0VIHO17m7XHYBYIBYG8eOqZ#scrollTo=7f87c58a
+
 hugging face model deployment @ https://huggingface.co/spaces/DYNAMAXD/BrainTumorXAI/tree/main
 
 vercel website deployment @ https://vercel.com/dynamaxds-projects/explainability-on-brain-tumor-dataset
