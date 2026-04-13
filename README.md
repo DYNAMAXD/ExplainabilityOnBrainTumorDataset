@@ -10,7 +10,7 @@
 <div align="center">
   <h3 align="center">Brain Tumor Detection & Explainable AI</h3>
   <p align="center">
-    A Deep Learning project focused on detecting brain tumors from MRI scans and providing visual explanations using state-of-the-art XAI techniques like Grad-CAM, Score-CAM, and more.
+    A Deep Learning project focused on detecting brain tumors from MRI scans and improving model transparency using Explainable AI (XAI) techniques like Grad-CAM, Score-CAM, and more.
     <br />
     <a href="https://explainability-on-brain-tumor-datas.vercel.app/"><strong>Explore the Website »</strong></a>
     <br />
@@ -52,7 +52,12 @@ cd ExplainabilityOnBrainTumorDataset
 ### 2. Create a Virtual Environment
 ```bash
 python -m venv venv
-source venv/bin/scripts/activate  # On Windows: venv\Scripts\activate
+
+# Windows
+venv\Scripts\activate
+
+# Linux / Mac
+source venv/bin/activate
 ```
 
 ### 3. Install Dependencies
@@ -79,9 +84,9 @@ Open the `vercel deployment` folder and serve the `index.html` file using a live
 
 ##  Connect with Me
 
-**Divyansh Yadav**[![LinkedIn][linkedin-shield]][linkedin-url]
+**Divyansh Yadav** [![LinkedIn][linkedin-shield]][linkedin-url]
 
-**Pratheep Senthilkumar**[![LinkedIn][linkedin-shield]][linkedin-url-pratheep]
+**Pratheep Senthilkumar** [![LinkedIn][linkedin-shield]][linkedin-url-pratheep]
 
 
 
