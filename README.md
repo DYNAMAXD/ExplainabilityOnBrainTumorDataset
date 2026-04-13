@@ -73,12 +73,15 @@ Open the `vercel deployment` folder and serve the `index.html` file using a live
 ##  Contributors
 
 *   **DYNAMAXD** - *Lead Developer* - [GitHub Profile](https://github.com/DYNAMAXD)
+*   **Pratheep56** - *AI Engineer* - [GitHub Profile](https://github.com/pratheep56)
 
 ---
 
 ##  Connect with Me
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
+**Divyansh Yadav**[![LinkedIn][linkedin-shield]][linkedin-url]
+
+**Pratheep Senthilkumar**[![LinkedIn][linkedin-shield]][linkedin-url-pratheep]
 
 
 
@@ -96,3 +99,4 @@ Open the `vercel deployment` folder and serve the `index.html` file using a live
 [license-url]: https://github.com/DYNAMAXD/ExplainabilityOnBrainTumorDataset/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/dynamaxd/
+[linkedin-url-pratheep]: https://www.linkedin.com/in/pratheep05/
